@@ -15,6 +15,12 @@ import img12 from './imgs/rasm7.svg';
 import img13 from './imgs/rasm1.svg';
 import img14 from './imgs/rasm2.svg';
 
+const arr = [
+  { card_title: "New Apartment Nice Wiew1", card_text: "Quincy St, Brooklyn, NY, USA 1", icon_text: "1 Neds", sum1: "$2800/mo", sum2: "$7500/mo", img: img1, imgB: img6, icon1: img9, icon2: img10, icon3: img11, icon4: img12, cardIcon1: img13, cardIcon2: img14 },
+  { card_title: "New Apartment Nice Wiew2", card_text: "Quincy St, Brooklyn, NY, USA 2", icon_text: "2 Neds", sum1: "$2800/mo", sum2: "$7500/mo", img: img2, imgB: img7, icon1: img9, icon2: img10, icon3: img11, icon4: img12, cardIcon1: img13, cardIcon2: img14 },
+  { card_title: "New Apartment Nice Wiew3", card_text: "Quincy St, Brooklyn, NY, USA 3", icon_text: "3 Neds", sum1: "$2800/mo", sum2: "$7500/mo", img: img3, imgB: img8, icon1: img9, icon2: img10, icon3: img11, icon4: img12, cardIcon1: img13, cardIcon2: img14 },
+]
+
 class Section extends React.Component {
   render() {
     return (
@@ -26,9 +32,9 @@ class Section extends React.Component {
             <img src={ img4 } alt="left-icon" />
           </span>
           <div className="card-img">
-            <Card data={ { img: img1, imgB: img6, icon1: img9, icon2: img10, icon3: img11, icon4: img12, cardIcon1: img13, cardIcon2: img14 } } />
-            <Card data={ { img: img2, imgB: img7, icon1: img9, icon2: img10, icon3: img11, icon4: img12, cardIcon1: img13, cardIcon2: img14 } } />
-            <Card data={ { img: img3, imgB: img8, icon1: img9, icon2: img10, icon3: img11, icon4: img12, cardIcon1: img13, cardIcon2: img14 } } />
+            {
+              arr.map(value => <Card data={ value } />)
+            }
           </div>
           <span className="right-icon">
             <img src={ img5 } alt="right-icon" />
