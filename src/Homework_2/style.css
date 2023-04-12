@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  height: 64px;
+  background: #0D263B;
+}
+
+.container {
+  width: 1270px;
+  margin: 0 auto;
+}
+
+.box {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.nav_item h1 {
+  color: #fff;
+  padding-left: 12px;
+}
+
+.nav_item ul {
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_item ul li {
+  list-style: none;
+}
+
+.nav_item ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.login {
+  width: 120px;
+  height: 44px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.search {
+  height: 64px;
+}
+
+.inp1 {
+  width: 830px;
+  height: 44px;
+  font-size: 14px;
+  padding-left: 50px;
+  border: 1px solid #E6E9EC;
+  border-radius: 2px;
+  outline: none;
+}
+
+.img_icon1 {
+  position: absolute;
+  width: 25px;
+  z-index: 2;
+  left: 15px;
+  top: 12px;
+}
+
+.img_icon2 {
+  position: absolute;
+  width: 25px;
+  z-index: 2;
+  left: 20px;
+  top: 10px;
+}
+
+.btn {
+  width: 150px;
+  height: 44px;
+  background: #fff;
+  border: 1px solid #E6E9EC;
+  border-radius: 2px;
+  padding: 12px 16px 12px 44px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.searchBtn {
+  width: 180px;
+  height: 44px;
+  background: #0061DF;
+  border: 1px solid #0061DF;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 78px;
+  outline: none;
+}
+
+.img_icon3 {
+  position: absolute;
+  z-index: 2;
+  left: 54px;
+  top: 14px;
+}
+
+.bir,
+.ikki,
+.uch {
+  position: relative;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.fon_img {
+  width: 1440px;
+  height: 571px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fon_img img {
+  position: absolute;
+}
+
+.opacity {
+  width: 1440px;
+  height: 571px;
+  background: rgb(0, 0, 0, 0.65);
+  position: absolute;
+  z-index: 5;
+}
+
+.left {
+  z-index: 10;
+  position: absolute;
+  top: 285px;
+  left: 50px;
+  background: rgba(255, 255, 255, .1);
+  padding: 18px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.right {
+  z-index: 10;
+  position: absolute;
+  top: 285px;
+  right: 50px;
+  background: rgba(255, 255, 255, .1);
+  padding: 18px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.right:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, .15);
+  padding: 19px;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.left:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, .15);
+  padding: 19px;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.filter_box {
+  position: absolute;
+  width: 920px;
+  height: 410px;
+  background: #fff;
+  z-index: 20;
+  right: 130px;
+  top: 10px;
+  border-radius: 5px;
+}
+
+.del {
+  display: none;
+}
