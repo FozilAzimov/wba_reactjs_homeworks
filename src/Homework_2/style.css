@@ -299,7 +299,7 @@ body {
   align-items: center;
   position: absolute;
   bottom: 32px;
-  left: 716px;
+  left: 680px;
   z-index: 5;
 }
 
@@ -370,4 +370,19 @@ body {
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 0 auto;
+}
+
+th {
+  padding: 10px 0;
+}
+
+td {
+  padding: 10px 0;
+  text-align: center;
 }

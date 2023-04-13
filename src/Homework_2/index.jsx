@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { data } from './data';
 import img1 from './imgs/font_img.svg';
 import img2 from './imgs/group.svg';
 import img3 from './imgs/icon-1.svg';
@@ -14,6 +15,10 @@ import img11 from './imgs/title_icon4.svg';
 
 
 class State extends React.Component {
+  state = {
+    data,
+  }
+  filter = {};
   render() {
     const contain = () => {
       const filter_box = document.querySelector(".filter_box");
@@ -23,8 +28,19 @@ class State extends React.Component {
       const filter_box = document.querySelector(".filter_box");
       filter_box.classList.remove("del");
     }
+    const change = ({ target: { value, name } }) => {
+      let info = data;
+      this.filter[name] = value;
+
+      Object.entries(this.filter).forEach(([key, value]) => {
+        info = info.filter((item) => {
+          return item[key].toString().toLowerCase().includes(value.toLowerCase())
+        });
+      });
+      this.setState({ data: info });
+    }
     return (
-      <div className="parent">
+      <div className="parent" >
         <nav className='navbar'>
           <div className="container">
             <div className="box">
@@ -98,10 +114,10 @@ class State extends React.Component {
                 <h1>Address</h1>
                 <div className="inp_box">
                   <form action="#">
-                    <input type="text" placeholder='Country' />
-                    <input type="text" placeholder='Region' />
-                    <input type="text" placeholder='City' />
-                    <input type="text" placeholder='Zip code' />
+                    <input name='country' onChange={ change } placeholder='Country' type="text" />
+                    <input name='region' onChange={ change } placeholder='Region' type="text" />
+                    <input name='city' onChange={ change } placeholder='City' type="text" />
+                    <input name='zipCode' onChange={ change } placeholder='Zip code' type="text" />
                   </form>
                 </div>
               </div>
@@ -109,9 +125,9 @@ class State extends React.Component {
                 <h1>Apartment info</h1>
                 <div className="inp_box">
                   <form action="#">
-                    <input type="text" placeholder='Rooms' />
-                    <input type="text" placeholder='Size' />
-                    <input type="text" placeholder='Sort' />
+                    <input name='rooms' onChange={ change } placeholder='Rooms' type="text" />
+                    <input name='size' onChange={ change } placeholder='Size' type="text" />
+                    <input name='sort' onChange={ change } placeholder='Sort' type="text" />
                   </form>
                 </div>
               </div>
@@ -119,8 +135,8 @@ class State extends React.Component {
                 <h1>Price</h1>
                 <div className="inp_box">
                   <form action="#">
-                    <input type="text" placeholder='Min price' />
-                    <input type="text" placeholder='Max price' />
+                    <input name='minPrice' onChange={ change } placeholder='Min price' type="text" />
+                    <input name='maxPrice' onChange={ change } placeholder='Max price' type="text" />
                   </form>
                 </div>
               </div>
@@ -130,15 +146,54 @@ class State extends React.Component {
               <button>Submit</button>
             </div>
           </div>
+          <div className="slider_icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </section>
-        <div className="slider_icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+
+        {
+          <table border={ 1 } >
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Country</th>
+                <th>Region</th>
+                <th>Zip code</th>
+                <th>Rooms</th>
+                <th>Size</th>
+                <th>City</th>
+                <th>Sort</th>
+                <th>Min Price</th>
+                <th>Max Price</th>
+              </tr>
+            </thead>
+            {
+              this.state.data.map(value => {
+                return (
+                  <tbody>
+                    <tr>
+                      <td>{ value.id }</td>
+                      <td>{ value.country }</td>
+                      <td>{ value.region }</td>
+                      <td>{ value.zipCode }</td>
+                      <td>{ value.rooms }</td>
+                      <td>{ value.size }</td>
+                      <td>{ value.city }</td>
+                      <td>{ value.sort }</td>
+                      <td>{ value.minPrice }</td>
+                      <td>{ value.maxPrice }</td>
+                    </tr>
+                  </tbody>
+                )
+              })
+            }
+          </table >
+        }
+      </div >
     )
   }
 }
