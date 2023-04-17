@@ -11,6 +11,7 @@ import Category from '../components/Category_Section';
 import ImgSlider from '../components/Img_Slider';
 import Rent from '../components/Rent_Section';
 import Testimonials from '../components/Testimonials_Section';
+import Footer from '../components/Footer';
 
 
 
@@ -30,6 +31,7 @@ export default class Root extends Component {
         <ImgSlider />
         <Rent />
         <Testimonials />
+        <Footer />
       </>
     )
   }
