@@ -30,13 +30,13 @@ export default class Fon_Section extends Component {
                 <Icons.Bed />4 Beds
               </FonTitle>
               <FonTitle type="small">
-                <Icons.Bed />5 Beths
+                <Icons.Bath />5 Beths
               </FonTitle>
               <FonTitle type="small">
-                <Icons.Bed />1 Garag
+                <Icons.Car />1 Garag
               </FonTitle>
               <FonTitle type="small">
-                <Icons.Bed />1200 Sq Ft
+                <Icons.Ruler />1200 Sq Ft
               </FonTitle>
             </Box>
             <FonTitle bold type="medium">$5,250/mo</FonTitle>

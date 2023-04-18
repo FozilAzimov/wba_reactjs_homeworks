@@ -7,15 +7,42 @@ import { ReactComponent as facebook } from '../../assets/icons/facebook.svg';
 import { ReactComponent as twitter } from '../../assets/icons/twitter.svg';
 import { ReactComponent as instagram } from '../../assets/icons/instagrem.svg';
 import { ReactComponent as linkedin } from '../../assets/icons/linkedin.svg';
+import { ReactComponent as logo } from '../../assets/icons/logo.svg';
+import { ReactComponent as topIcon } from '../../assets/icons/topIcon.svg';
 
 export const Icons = styled.div``;
-Icons.Pin = styled(pin)``;
-Icons.Phone = styled(phone)``;
-Icons.Email = styled(email)``;
-Icons.Facebook = styled(facebook)``;
-Icons.Twitter = styled(twitter)``;
-Icons.Instagram = styled(instagram)``;
-Icons.Linkedin = styled(linkedin)``;
+const active = css`
+:hover{
+  cursor: pointer;
+}
+`
+Icons.Pin = styled(pin)`
+${ active }
+`;
+Icons.Phone = styled(phone)`
+${ active }
+`;
+Icons.Email = styled(email)`
+${ active }
+`;
+Icons.Facebook = styled(facebook)`
+${ active }
+`;
+Icons.Twitter = styled(twitter)`
+${ active }
+`;
+Icons.Instagram = styled(instagram)`
+${ active }
+`;
+Icons.Linkedin = styled(linkedin)`
+${ active }
+`;
+Icons.Logo = styled(logo)`
+${ active }
+`;
+Icons.TopIcon = styled(topIcon)`
+${ active }
+`;
 
 export const Parent = styled.div`
 width: 1518px;
@@ -52,18 +79,65 @@ width:  ${ ({ type }) => {
     }
   } };;
 height: 276px;
-border: 1px solid #fff;
 text-align: start;
 `
 export const Title = styled.div`
 font-size: ${ ({ bold }) => bold ? "16px" : "14px" };
 font-weight: ${ ({ bold }) => bold ? "600" : "400" };
-margin-left: ${ ({ bold }) => bold ? "0" : "15px" };
+margin-left: ${ ({ type }) => {
+    switch (type) {
+      case "margin": return "15px";
+      default: return "0";
+    }
+  } };
+:hover{
+  cursor: ${ ({ bold }) => bold ? "default" : "pointer" };
+}
 `
 export const Text = styled.div`
-width: 270px;
-height: 40px;
+width: 250px;
+height: ${ ({ height }) => height ? "40px" : "20px" };
 display: flex;
 line-height: 20px;
-margin-top: 23px;
+margin-top:23px;
+`
+export const Footer_icons = styled.div`
+width: 160px;
+height: 36px;
+${ Display }
+position: relative;
+`
+export const Opasity = styled.div`
+width: 36px;
+height: 36px;
+border-radius: 3px;
+opacity: .1;
+background: #fff;
+position: absolute;
+right: 38px;
+`
+export const Footer_logo = styled.div`
+height: 68px;
+${ Display };
+`
+export const Footer_title = styled.div`
+height: 36px;
+width: 110px;
+${ Display };
+`
+export const Footer_text = styled.div`
+height: 45px;
+width: 480px;
+${ Display };
+`
+export const Top_icon = styled.button`
+width: 45px;
+height: 45px;
+background: #0061DF;
+border: none;
+:hover{
+  cursor: pointer;
+}
+${ Display }
+justify-content: center;
 `
