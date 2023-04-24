@@ -12,9 +12,14 @@ import ReactDOM from 'react-dom/client';
 // 2-homework end
 
 // 3-homework start
-import Root from './Homework_3/root';
-import './index.css';
+// import './index.css';
+// import Root from './Homework_3/root';
 // 3-homework end
+
+// 4-homework start
+import './index.css';
+import Root from './Homework_4/root';
+// 4-homework end
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
