@@ -23,10 +23,17 @@ Icons.yurak = styled(yurak)``;
 
 export const Parent = styled.div`
 width: 1518px;
+@media(max-width:375px){
+  width: 375px;
+}
 `
 export const Container = styled.div`
 width: 1270px;
 margin: 0 auto;
+@media(max-width:375px){
+  width: 343px;
+  margin: 0 auto;
+}
 `
 const Display = css`
 display: flex;
@@ -36,6 +43,9 @@ align-items: center;
 
 export const Title = styled.h1`
 text-align: center;
+@media(max-width:375px){
+  width: 343px;
+}
 `
 export const Text = styled.div`
 color: ${ ({ black }) => black ? '#0D263B' : '#696969' };
@@ -87,6 +97,9 @@ align-items: start;
 flex-wrap: wrap;
 margin-top: 16px;
 row-gap: 20px;
+@media(max-width:375px){
+  width:375px;
+}
 `
 
 export const Card = styled.div`
@@ -98,6 +111,9 @@ transition: .3s;
   cursor: pointer;
   box-shadow: 0 0 10px silver;
   transition: .3s;
+}
+@media(max-width){
+  width: 243px;
 }
 `;
 
@@ -137,6 +153,9 @@ background: ${ ({ bg }) => bg ? '#0061DF' : '#0D263B' };
 top: 20px;
 left: ${ ({ bg }) => bg ? '20px' : '287px' };
 position: absolute;
+:hover{
+  cursor: pointer;
+}
 `
 export const Card_titleTop = styled.div`
 width: 380px;

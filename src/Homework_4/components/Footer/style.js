@@ -49,11 +49,18 @@ width: 1518px;
 height: 417px;
 background: #0D263B;
 color: #fff;
+@media(max-width:375px){
+  width: 375px;
+  height: 1285px;
+}
 `
 export const Container = styled.div`
 width: 1270px;
 margin: 0 auto;
 text-align: center;
+@media(max-width:375px){
+  width: 343px;
+}
 `
 const Display = css`
 display: flex;
@@ -63,11 +70,20 @@ align-items: center;
 export const Footer_top = styled.div`
 height: 348px;
 ${ Display }
+@media(max-width:375px){
+  width: 343px;
+  height: 1136px;
+  flex-direction: column;
+  align-items: start;
+}
 `
 export const Footer_bottom = styled.div`
 height: 68px;
 border-top: 1px solid rgba(255, 255, 255, 0.15);
-
+@media(max-width:375px){
+  width: 375px;
+  height: 148px;
+}
 `
 export const Footer_Box = styled.div`
 width:  ${ ({ type }) => {
@@ -77,9 +93,20 @@ width:  ${ ({ type }) => {
       case "small": return "85px";
       default: return "20px";
     }
-  } };;
+  } };
 height: 276px;
 text-align: start;
+@media(max-width:375px){
+  margin-top: 50px;
+  height:  ${ ({ type }) => {
+    switch (type) {
+      case "large": return "230px";
+      case "medium": return "300px";
+      case "small": return "200px";
+      default: return "20px";
+    }
+  } };
+}
 `
 export const Title = styled.div`
 font-size: ${ ({ bold }) => bold ? "16px" : "14px" };
@@ -119,6 +146,12 @@ right: 38px;
 export const Footer_logo = styled.div`
 height: 68px;
 ${ Display };
+@media(max-width:375px){
+  height: 148px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
 `
 export const Footer_title = styled.div`
 height: 36px;
@@ -129,6 +162,11 @@ export const Footer_text = styled.div`
 height: 45px;
 width: 480px;
 ${ Display };
+@media(max-width:375px){
+  width: 240px;
+  height: 40px;
+  text-align: center;
+}
 `
 export const Top_icon = styled.button`
 width: 45px;
@@ -140,4 +178,11 @@ border: none;
 }
 ${ Display }
 justify-content: center;
+@media(max-width:375px){
+width: 45px;
+height: 45px;
+position: absolute;
+right: 0px;
+bottom: 16px;
+}
 `

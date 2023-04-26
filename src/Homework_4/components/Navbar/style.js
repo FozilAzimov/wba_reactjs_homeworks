@@ -14,6 +14,10 @@ export const Parent = styled.div`
 width: 1518px;
 height: 64px;
 background: #0D263B;
+@media(max-width:375px){
+  width: 375px;
+  background: #fff;
+}
 `
 export const Container = styled.div`
 width: 1270px;

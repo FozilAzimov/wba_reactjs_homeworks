@@ -26,11 +26,10 @@ import {
   Button,
 } from './style';
 
-import user from '../../assets/imgs/user3.jpg'
+
 
 export default function Properties() {
-  const [data, dispatch] = CardContext();
-  console.log(user);
+  const [state, dispatch] = CardContext();
   return (
     <Parent>
       <Container>
@@ -51,7 +50,7 @@ export default function Properties() {
 
           <Card_Box>
             {
-              data.map(({ src, user_img, title, text, box: { name1, name2, name3, name4 }, sum1, sum2 }) => {
+              state.map(({ src, user_img, title, text, box: { name1, name2, name3, name4 }, sum1, sum2 }) => {
                 return (
                   <Card>
 
