@@ -43,9 +43,6 @@ align-items: center;
 
 export const Title = styled.h1`
 text-align: center;
-@media(max-width:375px){
-  width: 343px;
-}
 `
 export const Text = styled.div`
 color: ${ ({ black }) => black ? '#0D263B' : '#696969' };
@@ -97,9 +94,6 @@ align-items: start;
 flex-wrap: wrap;
 margin-top: 16px;
 row-gap: 20px;
-@media(max-width:375px){
-  width:375px;
-}
 `
 
 export const Card = styled.div`
@@ -112,8 +106,8 @@ transition: .3s;
   box-shadow: 0 0 10px silver;
   transition: .3s;
 }
-@media(max-width){
-  width: 243px;
+@media(max-width: 375px) {
+  width: 343px;
 }
 `;
 
@@ -121,6 +115,9 @@ export const Card_Img = styled.img`
 width: 380px;
 height: 220px;
 border-radius: 3px 3px 0 0;
+@media(max-width: 375px) {
+  width: 343px;
+}
 `;
 export const User_img = styled.img`
 position: absolute;
@@ -139,6 +136,9 @@ border-right: 1px solid #E6E9EC;
 border-bottom: 1px solid #E6E9EC;
 margin-top: -8px;
 position: relative;
+@media(max-width: 375px) {
+  width: 343px;
+}
 `;
 
 export const Btn = styled.button`
@@ -156,12 +156,18 @@ position: absolute;
 :hover{
   cursor: pointer;
 }
+@media(max-width: 375px) {
+left: ${ ({ bg }) => bg ? '20px' : '248px' };
+}
 `
 export const Card_titleTop = styled.div`
 width: 380px;
 height: 150px;
 text-align: start;
 padding: 24px 0 16px 20px;
+@media(max-width: 375px) {
+  width: 343px;
+}
 `
 export const Card_titleBottom = styled.div`
 width: 380px;
@@ -169,6 +175,9 @@ height: 60px;
 padding: 8px 20px;
 border-top: 1px solid #E6E9EC;
 ${ Display }
+@media(max-width: 375px) {
+  width: 343px;
+}
 `
 
 export const IconCard = styled.div`
@@ -176,6 +185,9 @@ height: 44px;
 width: 340px;
 margin-top: 15px;
 ${ Display }
+@media(max-width: 375px) {
+  width: 303px;
+}
 `
 export const IconBox = styled.div`
 height: 44px;

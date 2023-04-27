@@ -16,12 +16,15 @@ height: 64px;
 background: #0D263B;
 @media(max-width:375px){
   width: 375px;
-  background: #fff;
+  background: silver;
 }
 `
 export const Container = styled.div`
 width: 1270px;
 margin: 0 auto;
+@media(max-width: 375px) {
+  width: 343px;
+}
 `
 const Display = css`
 display: flex;
@@ -30,6 +33,9 @@ align-items: center;
 `
 export const Nav = styled(Container)`
 ${ Display };
+@media(max-width: 375px) {
+  width: 343px;
+}
 `
 export const Logo = styled.div`
 width: 117px;

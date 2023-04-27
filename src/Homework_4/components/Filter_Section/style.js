@@ -41,10 +41,16 @@ export const Parent = styled.div`
 width: 1518px;
 height: 64px;
 background: #fff;
+@media(max-width: 375px) {
+  width: 375px;
+}
 `
 export const Container = styled.div`
 width: 1270px;
 margin: 0 auto;
+@media(max-width: 375px) {
+  width: 343px;
+}
 `
 const Display = css`
 display: flex;
@@ -54,6 +60,12 @@ align-items: center;
 export const Filter = styled(Container)`
 height: 64px;
 ${ Display };
+@media(max-width: 375px) {
+  width: 343px;
+  height: 242px;
+  flex-direction: column;
+  align-items: start;
+}
 `
 export const Input_icon = styled.div`
 position: relative;
@@ -68,6 +80,9 @@ padding-left: 44px ;
 font-size: 14px;
 font-weight: 400px;
 color: #0D263B;
+@media(max-width: 375px) {
+  width: 343px;
+}
 `
 export const Modal_btn = styled(First_Filter_input)`
 width: 131px;

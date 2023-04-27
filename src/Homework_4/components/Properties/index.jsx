@@ -35,7 +35,7 @@ export default function Properties() {
       <Container>
         <Title>
           <Text type={ 'large' } m_b={ 'orta' } bold black m_t >Properties</Text>
-          <Text type={ 'small' } m_b={ 'katta' }>Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</Text>
+          <Text type={ 'small' } m_b={ 'katta' } className='text'>Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</Text>
           <Sort_Result>
             <Result>
               <Text type={ 'small' }><span style={ { color: "#0D263B" } }>13,474</span> result</Text>
