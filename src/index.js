@@ -17,18 +17,25 @@ import ReactDOM from 'react-dom/client';
 // 3-homework end
 
 // 4-homework start
-import './index.css';
-import Root from './Homework_4/root';
+// import './index.css';
+// import Root from './Homework_4/root';
 // 4-homework end
+
+// 5-homework start
+import './index.css';
+import Root from './Homework_5/root';
+// 5-homework end
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Section /> */ }
+    {/* 1- <Section /> */ }
 
-    {/* <State /> */ }
+    {/* 2 - <State /> */ }
 
-    {/* <Styled /> */ }
+    {/* 3 - <Styled /> */ }
+
+    {/* 4 - <Root /> */ }
 
     <Root />
   </React.StrictMode>
