@@ -26,8 +26,6 @@ import {
   Button,
 } from './style';
 
-
-
 export default function Properties() {
   const [state, dispatch] = CardContext();
   return (
