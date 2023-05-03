@@ -27,13 +27,25 @@ import ReactDOM from 'react-dom/client';
 // 5-homework end
 
 // 6-homework start
-import './index.css';
-import Root from './Homework_6/root';
+// import './index.css';
+// import Root from './Homework_6/root';
 // 6-homework end
+
+// 7-homework start
+// import './index.css';
+// import Root from './Homework_7/root';
+// import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+// 7-homework end
+
+// 8-homework start
+import './index.css';
+import Root from './Homework_8/root';
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+// 8-homework end
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <>
     {/* 1- <Section /> */ }
 
     {/* 2 - <State /> */ }
@@ -44,6 +56,10 @@ root.render(
 
     {/* 5 - <Root /> */ }
 
-    <Root />
-  </React.StrictMode>
+    {/* 6 - <Root /> */ }
+
+    <BrowserRouter>
+      <Root />
+    </BrowserRouter>
+  </>
 );
