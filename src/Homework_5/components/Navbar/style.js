@@ -42,4 +42,12 @@ export const Text = styled.div`
 font-size: 16px;
 color: ${ ({ white }) => white ? '#fff' : 'lightgray' };
 font-weight: ${ ({ bold }) => bold ? '700' : '400' };
+transition: all .3s;
+:hover{
+  cursor: pointer;
+}
+:active{
+  color: #fff;
+  transition: all .3s;
+}
 `

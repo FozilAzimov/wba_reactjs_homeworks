@@ -26,6 +26,7 @@ export default function Navbar() {
               <Text>Properties</Text>
               <Text>Contact</Text>
             </Nav>
+
           </NavBox>
         </Container>
       </Parent>
