@@ -38,10 +38,16 @@ import ReactDOM from 'react-dom/client';
 // 7-homework end
 
 // 8-homework start
-import './index.css';
-import Root from './Homework_8/root';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+// import './index.css';
+// import Root from './Homework_8/root';
+// import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 // 8-homework end
+
+// 9-homework start
+import './index.css';
+import Root from './Homework_9/root';
+import { BrowserRouter } from 'react-router-dom';
+// 9-homework end
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
